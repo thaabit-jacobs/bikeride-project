@@ -1,4 +1,4 @@
-package rides;
+package bicycles.rides;
 
 import bicycles.*;
 import models.MountainBike; //delete

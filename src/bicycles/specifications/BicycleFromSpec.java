@@ -1,4 +1,4 @@
-package specifications;
+package bicycles.specifications;
 
 import bicycles.*;
 
