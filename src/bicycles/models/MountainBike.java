@@ -9,15 +9,10 @@ public class MountainBike extends BicycleBase{
 	};
 	
 	public void brake() {
-		if(currentSpeed() < 3)
-			changeSpeed(5);
-		else
-			changeSpeed(-3);
+		changeSpeed(-3);
+
+		if(currentSpeed() <= 0)
+			stop();
 	};
 	
-	public static void main(String[] args) {
-		MountainBike mb = new MountainBike();
-		mb.accelerate();
-		System.out.println(mb.currentSpeed());
-	}
 }

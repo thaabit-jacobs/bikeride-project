@@ -9,10 +9,10 @@ public class RoadBike extends BicycleBase{
 	};
 	
 	public void brake() {
-		if(currentSpeed() < 4)
-			changeSpeed(0);
-		else
-			changeSpeed(-4);
+		changeSpeed(-4);
+
+		if(currentSpeed() <= 0)
+			stop();
 	};
 
 }
