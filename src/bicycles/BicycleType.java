@@ -13,7 +13,7 @@ public enum BicycleType {
 		
 		this.bikeName = bikeName;
 		this.accelerationSpeed = accelerationSpeed;
-		this.brakeSpeed = brakeSpeed;
+		this.brakeSpeed = -brakeSpeed;
 		
 	}
 	
