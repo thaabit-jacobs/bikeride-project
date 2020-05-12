@@ -11,7 +11,7 @@ public class Tandem extends BicycleBase{
 	public void brake() {
 		changeSpeed(-7);
 
-		if(currentSpeed() <= 0)
+		if(currentSpeed() < 0)
 			stop();
 	}
 }

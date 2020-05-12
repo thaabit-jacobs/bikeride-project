@@ -8,7 +8,7 @@ public class FunRide {
 	private ArrayList<BicycleType> bicycleList;
 	private int numOfBikes;
 	
-	FunRide(int numOfBikes) {
+	public FunRide(int numOfBikes) {
 		
 		bicycleList = new ArrayList<BicycleType>();
 		
@@ -16,14 +16,14 @@ public class FunRide {
 		
 	}
 	
-	void accept(BicycleType bike) {
+	public void accept(BicycleType bike) {
 		if(bicycleList.size() == numOfBikes) {
 			System.out.println("Fun ride full");
 		} else
 			bicycleList.add(bike);
 	}
 	
-	int getCountForType(BicycleType bike) {
+	public int getCountForType(BicycleType bike) {
 		int count = 0;
 		
 		for(BicycleType b: bicycleList) {
@@ -33,7 +33,7 @@ public class FunRide {
 		return count;
 	}
 	
-	int getEnteredCount() {
+	public int getEnteredCount() {
 		return bicycleList.size();
 	}
 	
