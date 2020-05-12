@@ -2,9 +2,9 @@ package rides;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.api.Test;
-
-import models.*;
-import bicycles.*;
+import bicycles.models.*;
+import bicycles.rides.*;
+import bicycles.BicycleType;
 
 public class RideTest {
 	
@@ -32,38 +32,6 @@ public class RideTest {
 			assertEquals(10, t.currentSpeed());
 	    }
 	 
-	 //
-	 @Test
-	    public void RideOneTestMutilpleMountainBike() {
-			MountainBike mb = new MountainBike();
-			BikeRideOne bro = new BikeRideOne(mb);	
-			bro.ride(mb);
-			bro.ride(mb);
-			bro.ride(mb);
-			assertEquals(12, mb.currentSpeed());
-	    }
-	 
-	 @Test
-	    public void RideOneTestMutilpleRoadBike() {
-		 	RoadBike rb = new RoadBike();
-			BikeRideOne bro = new BikeRideOne(rb);	
-			bro.ride(rb);
-			bro.ride(rb);
-			bro.ride(rb);
-			assertEquals(42, rb.currentSpeed());
-	    }
-	 
-	 @Test
-	    public void RideOneTestMutilpleTandem() {
-		 	Tandem t = new Tandem();
-			BikeRideOne bro = new BikeRideOne(t);	
-			bro.ride(t);
-			bro.ride(t);
-			bro.ride(t);
-			assertEquals(30, t.currentSpeed());
-	    }
-	 
-	 ////
 	 @Test
 	    public void RideTwoTestMountainBike() {
 			MountainBike mb = new MountainBike();
@@ -88,38 +56,6 @@ public class RideTest {
 			assertEquals(0, t.currentSpeed());
 	    }
 	 
-	 //
-	 @Test
-	    public void RideTwoTestMutilpleMountainBike() {
-			MountainBike mb = new MountainBike();
-			BikeRideOne bro = new BikeRideOne(mb);	
-			bro.ride(mb);
-			bro.ride(mb);
-			bro.ride(mb);
-			assertEquals(0, mb.currentSpeed());
-	    }
-	 
-	 @Test
-	    public void RideTwoTestMutilpleRoadBike() {
-		 	RoadBike rb = new RoadBike();
-			BikeRideOne bro = new BikeRideOne(rb);	
-			bro.ride(rb);
-			bro.ride(rb);
-			bro.ride(rb);
-			assertEquals(0, rb.currentSpeed());
-	    }
-	 
-	 @Test
-	    public void RideTwoTestMutilpleTandem() {
-		 	Tandem t = new Tandem();
-			BikeRideOne bro = new BikeRideOne(t);	
-			bro.ride(t);
-			bro.ride(t);
-			bro.ride(t);
-			assertEquals(0, t.currentSpeed());
-	    }
-	 
-	 ///////
 	 
 	 @Test
 	    public void RideThreeTestMountainBike() {
@@ -144,41 +80,11 @@ public class RideTest {
 			bro.ride(t);
 			assertEquals(0, t.currentSpeed());
 	    }
-	 
-	 //
-	 @Test
-	    public void RideThreeTestMutilpleMountainBike() {
-			MountainBike mb = new MountainBike();
-			BikeRideOne bro = new BikeRideOne(mb);	
-			bro.ride(mb);
-			bro.ride(mb);
-			bro.ride(mb);
-			assertEquals(0, mb.currentSpeed());
-	    }
+	
 	 
 	 @Test
-	    public void RideThreeTestMutilpleRoadBike() {
-		 	RoadBike rb = new RoadBike();
-			BikeRideOne bro = new BikeRideOne(rb);	
-			bro.ride(rb);
-			bro.ride(rb);
-			bro.ride(rb);
-			assertEquals(0, rb.currentSpeed());
-	    }
-	 
-	 @Test
-	    public void RideThreeTestMutilpleTandem() {
-		 	Tandem t = new Tandem();
-			BikeRideOne bro = new BikeRideOne(t);	
-			bro.ride(t);
-			bro.ride(t);
-			bro.ride(t);
-			assertEquals(0, t.currentSpeed());
-	    }
-	 
-	 @Test
-	    public void FunRideTest() {
-		 	FunRide fr = new FunRide();
+	    public void FunRideTestBikeTypeCount() {
+		 	FunRide fr = new FunRide(5);
 		 	fr.accept(BicycleType.MOUNTAIN_BIKE);
 		 	fr.accept(BicycleType.MOUNTAIN_BIKE);
 		 	fr.accept(BicycleType.MOUNTAIN_BIKE);
@@ -186,5 +92,15 @@ public class RideTest {
 		 	fr.accept(BicycleType.TANDEM);
 		 	
 			assertEquals(3, fr.getCountForType(BicycleType.MOUNTAIN_BIKE));
+	    }
+	 
+	 @Test
+	    public void FunRideTestNumBikeEntered() {
+		 	FunRide fr = new FunRide(5);
+		 	fr.accept(BicycleType.MOUNTAIN_BIKE);
+		 	fr.accept(BicycleType.ROAD_BIKE);
+		 	fr.accept(BicycleType.TANDEM);
+		 	
+			assertEquals(3, fr.getEnteredCount());
 	    }
 }
