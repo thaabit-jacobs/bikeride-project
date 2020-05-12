@@ -3,8 +3,6 @@ package specification;
 import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.api.Test;
 import bicycles.BicycleType;
-import specifications.*;
-import rides.*;
 import bicycles.specifications.*;
 import bicycles.rides.*;
 
