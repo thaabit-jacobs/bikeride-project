@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import bicycles.BicycleType;
 import specifications.*;
 import rides.*;
+import bicycles.specifications.*;
+import bicycles.rides.*;
 
 public class SpecificationTest {
 	
@@ -34,21 +36,21 @@ public class SpecificationTest {
     public void bikeSpecSpeedRoadbike() {
 		BicycleSpecification roadb = new BicycleSpecification(BicycleType.ROAD_BIKE);
 	
-        assertEquals(11, roadb.getBikeType().getBikeName());
+        assertEquals(11, roadb.getBikeType().getAccelerationSpeed());
     }
 	
 	@Test
     public void bikeSpecSpeedMountainbike() {
 		BicycleSpecification mountainb = new BicycleSpecification(BicycleType.MOUNTAIN_BIKE);
 
-        assertEquals(5, mountainb.getBikeType().getBikeName());
+        assertEquals(5, mountainb.getBikeType().getAccelerationSpeed());
     }
 	
 	@Test
     public void bikeSpecSpeedTandem() {
 		BicycleSpecification tandemb = new BicycleSpecification(BicycleType.TANDEM);
 		
-        assertEquals(12, tandemb.getBikeType().getBikeName());
+        assertEquals(12, tandemb.getBikeType().getAccelerationSpeed());
     }
 	
 	//////
@@ -57,21 +59,21 @@ public class SpecificationTest {
     public void bikeSpecBrakeRoadbike() {
 		BicycleSpecification roadb = new BicycleSpecification(BicycleType.ROAD_BIKE);
 	
-        assertEquals(4, roadb.getBikeType().getBikeName());
+        assertEquals(4, roadb.getBikeType().getBrakeSpeed());
     }
 	
 	@Test
     public void bikeSpecBrakeMountainbike() {
 		BicycleSpecification mountainb = new BicycleSpecification(BicycleType.MOUNTAIN_BIKE);
 
-        assertEquals(3, mountainb.getBikeType().getBikeName());
+        assertEquals(3, mountainb.getBikeType().getBrakeSpeed());
     }
 	
 	@Test
     public void bikeSpecBrakeTandem() {
 		BicycleSpecification tandemb = new BicycleSpecification(BicycleType.TANDEM);
 		
-        assertEquals(7, tandemb.getBikeType().getBikeName());
+        assertEquals(7, tandemb.getBikeType().getBrakeSpeed());
     }
 	
 	////////
