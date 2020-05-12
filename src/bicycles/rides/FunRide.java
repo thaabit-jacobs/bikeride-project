@@ -6,17 +6,18 @@ import java.util.*;
 public class FunRide {
 	
 	private ArrayList<BicycleType> bicycleList;
+	private int numOfBikes;
 	
-	FunRide() {
+	FunRide(int numOfBikes) {
 		
 		bicycleList = new ArrayList<BicycleType>();
 		
-		System.out.println("Only five bikes allowed in this ride");
+		this.numOfBikes = numOfBikes;
 		
 	}
 	
 	void accept(BicycleType bike) {
-		if(bicycleList.size() == 5) {
+		if(bicycleList.size() == numOfBikes) {
 			System.out.println("Fun ride full");
 		} else
 			bicycleList.add(bike);
@@ -26,11 +27,14 @@ public class FunRide {
 		int count = 0;
 		
 		for(BicycleType b: bicycleList) {
-			if(b == bike) count++;
+			if(b.getBikeName().equals(bike.getBikeName())) count++;
 		}
 		
 		return count;
 	}
 	
+	int getEnteredCount() {
+		return bicycleList.size();
+	}
 	
 }
