@@ -35,24 +35,24 @@ public class RideTest {
 	 @Test
 	    public void RideTwoTestMountainBike() {
 			MountainBike mb = new MountainBike();
-			BikeRideOne bro = new BikeRideOne(mb);	
-			bro.ride(mb);
+			BikeRideTwo brt = new BikeRideTwo(mb);	
+			brt.ride(mb);
 			assertEquals(0, mb.currentSpeed());
 	    }
 	 
 	 @Test
 	    public void RideTwoTestRoadBike() {
 		 	RoadBike rb = new RoadBike();
-			BikeRideOne bro = new BikeRideOne(rb);	
-			bro.ride(rb);
+		 	BikeRideTwo brt = new BikeRideTwo(rb);	
+		 	brt.ride(rb);
 			assertEquals(0, rb.currentSpeed());
 	    }
 	 
 	 @Test
 	    public void RideTwoTestTandem() {
 		 	Tandem t = new Tandem();
-			BikeRideOne bro = new BikeRideOne(t);	
-			bro.ride(t);
+		 	BikeRideTwo brt = new BikeRideTwo(t);	
+		 	brt.ride(t);
 			assertEquals(0, t.currentSpeed());
 	    }
 	 
@@ -60,24 +60,24 @@ public class RideTest {
 	 @Test
 	    public void RideThreeTestMountainBike() {
 			MountainBike mb = new MountainBike();
-			BikeRideOne bro = new BikeRideOne(mb);	
-			bro.ride(mb);
+			BikeRideThree brt = new BikeRideThree(mb);	
+			brt.ride(mb);
 			assertEquals(0, mb.currentSpeed());
 	    }
 	 
 	 @Test
 	    public void RideThreeTestRoadBike() {
 		 	RoadBike rb = new RoadBike();
-			BikeRideOne bro = new BikeRideOne(rb);	
-			bro.ride(rb);
+			BikeRideThree brt = new BikeRideThree(rb);	
+			brt.ride(rb);
 			assertEquals(0, rb.currentSpeed());
 	    }
 	 
 	 @Test
 	    public void RideThreeTestTandem() {
 		 	Tandem t = new Tandem();
-			BikeRideOne bro = new BikeRideOne(t);	
-			bro.ride(t);
+		 	BikeRideThree brt = new BikeRideThree(t);	
+		 	brt.ride(t);
 			assertEquals(0, t.currentSpeed());
 	    }
 	
