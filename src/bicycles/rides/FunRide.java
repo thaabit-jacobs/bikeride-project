@@ -26,7 +26,7 @@ public class FunRide {
 		int count = 0;
 		
 		for(BicycleType b: bicycleList) {
-			if(b.getBikeName().equals(bike.getBikeName())) count++;
+			if(b == bike) count++;
 		}
 		
 		return count;
