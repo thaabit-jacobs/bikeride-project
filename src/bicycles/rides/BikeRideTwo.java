@@ -22,7 +22,6 @@ public class BikeRideTwo implements BikeRide{
 		 this.bike.accelerate();
 		 this.bike.accelerate();
 		 this.bike.brake();
-		 this.bike.stop();
 	 }
 	
 	public int getCurrentSpeed() {
