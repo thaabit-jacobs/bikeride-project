@@ -7,52 +7,52 @@ import org.junit.jupiter.api.Test;
 
 public class ModelsTest {
 	
-	@Test
+    @Test
     public void shouldAccellerateMountainBike() {
-		MountainBike mb = new MountainBike();
-		mb.accelerate();
+    	MountainBike mb = new MountainBike();
+	mb.accelerate();
         assertEquals(5, mb.currentSpeed());
     }
 	
-	@Test
+    @Test
     public void shouldAccellerateMutipleMountainBike() {
-		MountainBike mb = new MountainBike();
-		mb.accelerate();
-		mb.accelerate();
+	MountainBike mb = new MountainBike();
+	mb.accelerate();
+	mb.accelerate();
         assertEquals(10, mb.currentSpeed());
     }
 	
-	@Test
+    @Test
     public void shouldAccellerateAndBrakeMountainBike() {
-		MountainBike mb = new MountainBike();
-		mb.accelerate();
-		mb.brake();
+	MountainBike mb = new MountainBike();
+	mb.accelerate();
+	mb.brake();
         assertEquals(2 , mb.currentSpeed());
     }
 	
-	@Test
+    @Test
     public void shouldAccellerateAndBrakeMutipleMountainBike() {
-		MountainBike mb = new MountainBike();
-		mb.accelerate();
-		mb.accelerate();
-		mb.brake();
-		mb.brake();
+	MountainBike mb = new MountainBike();
+	mb.accelerate();
+	mb.accelerate();
+	mb.brake();
+	mb.brake();
         assertEquals(4, mb.currentSpeed());
     }
 	
-	//
-	@Test
+	
+    @Test
     public void shouldAccellerateRoadBike() {
-		RoadBike rb = new RoadBike();
-		rb.accelerate();
+	RoadBike rb = new RoadBike();
+	rb.accelerate();
         assertEquals(11, rb.currentSpeed());
     }
 	
-	@Test
+    @Test
     public void shouldAccellerateMutipleRoadBike() {
-		RoadBike rb = new RoadBike();
-		rb.accelerate();
-		rb.accelerate();
+	RoadBike rb = new RoadBike();
+	rb.accelerate();
+	rb.accelerate();
         assertEquals(22, rb.currentSpeed());
     }
     
@@ -69,24 +69,24 @@ public class ModelsTest {
     	RoadBike rb = new RoadBike();
     	rb.accelerate();
     	rb.accelerate();
-		rb.brake();
-		rb.brake();
+	rb.brake();
+	rb.brake();
         assertEquals(14, rb.currentSpeed());
     }
     
-    //
+    
     @Test
     public void shouldAccellerateTandem() {
     	Tandem t = new Tandem();
-		t.accelerate();
+	t.accelerate();
         assertEquals(12, t.currentSpeed());
     }
 	
-	@Test
+    @Test
     public void shouldAccellerateMutipleTandem() {
-		Tandem t = new Tandem();
-		t.accelerate();
-		t.accelerate();
+	Tandem t = new Tandem();
+	t.accelerate();
+	t.accelerate();
         assertEquals(24, t.currentSpeed());
     }
     
@@ -103,8 +103,8 @@ public class ModelsTest {
     	Tandem t = new Tandem();
     	t.accelerate();
     	t.accelerate();
-		t.brake();
-		t.brake();
+	t.brake();
+	t.brake();
         assertEquals(10, t.currentSpeed());
     }
 }
