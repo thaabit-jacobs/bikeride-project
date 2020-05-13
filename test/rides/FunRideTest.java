@@ -8,25 +8,25 @@ import bicycles.rides.FunRide;
 
 public class FunRideTest {
 	
-	@Test
+    @Test
     public void FunRideTestBikeTypeCount() {
-	 	FunRide fr = new FunRide(5);
-	 	fr.accept(BicycleType.MOUNTAIN_BIKE);
-	 	fr.accept(BicycleType.MOUNTAIN_BIKE);
-	 	fr.accept(BicycleType.MOUNTAIN_BIKE);
-	 	fr.accept(BicycleType.ROAD_BIKE);
-	 	fr.accept(BicycleType.TANDEM);
+	 FunRide fr = new FunRide(5);
+	 fr.accept(BicycleType.MOUNTAIN_BIKE);
+	 fr.accept(BicycleType.MOUNTAIN_BIKE);
+	 fr.accept(BicycleType.MOUNTAIN_BIKE);
+	 fr.accept(BicycleType.ROAD_BIKE);
+	 fr.accept(BicycleType.TANDEM);
 	 	
-		assertEquals(3, fr.getCountForType(BicycleType.MOUNTAIN_BIKE));
+	assertEquals(3, fr.getCountForType(BicycleType.MOUNTAIN_BIKE));
     }
  
-	@Test
+    @Test
     public void FunRideTestNumBikeEntered() {
-	 	FunRide fr = new FunRide(5);
-	 	fr.accept(BicycleType.MOUNTAIN_BIKE);
-	 	fr.accept(BicycleType.ROAD_BIKE);
-	 	fr.accept(BicycleType.TANDEM);
+	 FunRide fr = new FunRide(5);
+	 fr.accept(BicycleType.MOUNTAIN_BIKE);
+	 fr.accept(BicycleType.ROAD_BIKE);
+	 fr.accept(BicycleType.TANDEM);
 	 	
-		assertEquals(3, fr.getEnteredCount());
+	assertEquals(3, fr.getEnteredCount());
     }
 }
