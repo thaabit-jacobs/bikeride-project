@@ -23,7 +23,8 @@ public class BikeRideThree implements BikeRide{
 		 this.bike.accelerate();
 		 this.bike.accelerate();
 		 this.bike.brake();
-		 this.bike.stop();
+		 this.bike.accelerate();
+		 this.bike.accelerate();
 	 }
 	
 	public int getCurrentSpeed() {
