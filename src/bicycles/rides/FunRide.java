@@ -1,22 +1,24 @@
 package bicycles.rides;
 
+import java.util.ArrayList;
+
 import bicycles.*;
-import java.util.*;
+
 
 public class FunRide {
 	
-	private ArrayList<BicycleType> bicycleList;
+	private ArrayList<Bicycle> bicycleList;
 	private int numOfBikes;
 	
 	public FunRide(int numOfBikes) {
 		
-		bicycleList = new ArrayList<BicycleType>();
+		bicycleList = new ArrayList<Bicycle>();
 		
 		this.numOfBikes = numOfBikes;
 		
 	}
 	
-	public void accept(BicycleType bike) {
+	public void accept(Bicycle bike) {
 		if(bicycleList.size() == numOfBikes) {
 			System.out.println("Fun ride full");
 		} else
@@ -26,8 +28,10 @@ public class FunRide {
 	public int getCountForType(BicycleType bike) {
 		int count = 0;
 		
-		for(BicycleType b: bicycleList) {
-			if(b.getBikeName().equals(bike.getBikeName())) count++;
+		for(Bicycle b: bicycleList) {
+			b.accelerate();
+			if(b.currentSpeed() == bike.getAccelerationSpeed()) 
+				count++;
 		}
 		
 		return count;
